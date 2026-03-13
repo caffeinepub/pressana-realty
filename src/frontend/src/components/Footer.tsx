@@ -26,15 +26,16 @@ export default function Footer() {
   return (
     <footer
       data-ocid="footer.section"
-      className="bg-[#060b17] border-t border-white/5 pt-16 pb-8"
+      className="bg-stone-100 dark:bg-[#060b17] border-t border-stone-200 dark:border-white/5 pt-16 pb-8"
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-3 gap-12 mb-12">
           <div>
             <div className="font-serif text-2xl text-gold tracking-[0.2em] mb-4">
-              PRESSANA <span className="text-cream">INFRA</span>
+              PRESSANA{" "}
+              <span className="text-stone-900 dark:text-[#f8f5f0]">INFRA</span>
             </div>
-            <p className="text-cream/50 font-sans text-sm leading-relaxed mb-6">
+            <p className="text-stone-500 dark:text-[#f8f5f0]/50 font-sans text-sm leading-relaxed mb-6">
               Building dreams on the prestigious Racecourse Corridor in
               Coimbatore. Premium RERA-approved villa plots designed for a life
               well-lived.
@@ -44,7 +45,7 @@ export default function Footer() {
                 href="https://www.instagram.com/pressanainfra/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 glass-dark rounded-xl hover:border-gold/40 hover:text-gold text-cream/50 transition-all"
+                className="p-2.5 glass-card rounded-xl hover:border-gold/40 hover:text-gold text-stone-500 dark:text-[#f8f5f0]/50 transition-all"
                 aria-label="Instagram"
                 data-ocid="footer.instagram.link"
               >
@@ -54,7 +55,7 @@ export default function Footer() {
                 href="https://www.facebook.com/urbancloudbypressana/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 glass-dark rounded-xl hover:border-gold/40 hover:text-gold text-cream/50 transition-all"
+                className="p-2.5 glass-card rounded-xl hover:border-gold/40 hover:text-gold text-stone-500 dark:text-[#f8f5f0]/50 transition-all"
                 aria-label="Facebook"
                 data-ocid="footer.facebook.link"
               >
@@ -64,7 +65,7 @@ export default function Footer() {
                 href="https://www.youtube.com/@PressanaInfra"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 glass-dark rounded-xl hover:border-gold/40 hover:text-gold text-cream/50 transition-all"
+                className="p-2.5 glass-card rounded-xl hover:border-gold/40 hover:text-gold text-stone-500 dark:text-[#f8f5f0]/50 transition-all"
                 aria-label="YouTube"
                 data-ocid="footer.youtube.link"
               >
@@ -74,14 +75,16 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-cream font-serif text-lg mb-6">Quick Links</h4>
+            <h4 className="text-stone-900 dark:text-[#f8f5f0] font-serif text-lg mb-6">
+              Quick Links
+            </h4>
             <ul className="space-y-3">
               {quickLinks.map((l) => (
                 <li key={l.label}>
                   <button
                     type="button"
                     onClick={() => handleNav(l.href)}
-                    className="text-cream/50 hover:text-gold font-sans text-sm transition-colors duration-200"
+                    className="text-stone-500 dark:text-[#f8f5f0]/50 hover:text-gold font-sans text-sm transition-colors duration-200"
                   >
                     {l.label}
                   </button>
@@ -91,11 +94,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-cream font-serif text-lg mb-6">Contact Us</h4>
+            <h4 className="text-stone-900 dark:text-[#f8f5f0] font-serif text-lg mb-6">
+              Contact Us
+            </h4>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
                 <MapPin size={16} className="text-gold mt-1 flex-shrink-0" />
-                <p className="text-cream/50 font-sans text-sm">
+                <p className="text-stone-500 dark:text-[#f8f5f0]/50 font-sans text-sm">
                   730/1, Avinashi Rd, Race Course, Coimbatore, Tamil Nadu 641018
                 </p>
               </div>
@@ -103,7 +108,7 @@ export default function Footer() {
                 <Phone size={16} className="text-gold flex-shrink-0" />
                 <a
                   href="tel:+916384444700"
-                  className="text-cream/50 hover:text-gold font-sans text-sm transition-colors"
+                  className="text-stone-500 dark:text-[#f8f5f0]/50 hover:text-gold font-sans text-sm transition-colors"
                 >
                   +91 63844 44700
                 </a>
@@ -112,7 +117,7 @@ export default function Footer() {
                 <Mail size={16} className="text-gold flex-shrink-0" />
                 <a
                   href="mailto:info@pressanainfra.com"
-                  className="text-cream/50 hover:text-gold font-sans text-sm transition-colors"
+                  className="text-stone-500 dark:text-[#f8f5f0]/50 hover:text-gold font-sans text-sm transition-colors"
                 >
                   info@pressanainfra.com
                 </a>
@@ -121,12 +126,12 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-cream/30 font-sans text-xs">
-            © 2026 Pressana Infra. All rights reserved. RERA:
-            TN/37/Building/7589/2026
+        <div className="border-t border-stone-200 dark:border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-stone-400 dark:text-[#f8f5f0]/30 font-sans text-xs">
+            © {new Date().getFullYear()} Pressana Infra. All rights reserved.
+            RERA: TN/37/Building/7589/2026
           </p>
-          <p className="text-cream/30 font-sans text-xs">
+          <p className="text-stone-400 dark:text-[#f8f5f0]/30 font-sans text-xs">
             Premium Villa Plots | Racecourse Corridor | Coimbatore | Tamil Nadu
           </p>
         </div>

@@ -108,6 +108,18 @@
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(201,168,76,0.15);
   }
+  .glass-card {
+    background: rgba(255,255,255,0.92);
+    border: 1px solid rgba(0,0,0,0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .dark .glass-card {
+    background: rgba(10,15,30,0.7);
+    border: 1px solid rgba(201,168,76,0.15);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
   .gold-gradient {
     background: linear-gradient(135deg, #c9a84c 0%, #e8cc7a 50%, #c9a84c 100%);
   }
@@ -125,12 +137,10 @@
   }
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar { width: 6px; }
 ::-webkit-scrollbar-track { background: #0a0f1e; }
 ::-webkit-scrollbar-thumb { background: #c9a84c; border-radius: 3px; }
 
-/* Loader animation */
 @keyframes loader-fill {
   from { width: 0%; }
   to { width: 100%; }
@@ -139,7 +149,6 @@
   animation: loader-fill 2.5s ease-in-out forwards;
 }
 
-/* Ripple effect */
 @keyframes ripple {
   0% { transform: scale(0); opacity: 0.6; }
   100% { transform: scale(4); opacity: 0; }
@@ -163,7 +172,6 @@
   opacity: 0;
 }
 
-/* WhatsApp pulse */
 @keyframes wa-pulse {
   0%, 100% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); }
   50% { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
@@ -172,7 +180,6 @@
   animation: wa-pulse 2s infinite;
 }
 
-/* Scroll progress */
 #scroll-progress {
   position: fixed;
   top: 0;

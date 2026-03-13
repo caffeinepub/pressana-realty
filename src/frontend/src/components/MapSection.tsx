@@ -13,26 +13,22 @@ export default function MapSection() {
     <section
       id="location"
       data-ocid="location.section"
-      className="py-24 md:py-32"
-      style={{
-        background: "linear-gradient(180deg, #0a0f1e 0%, #0d1528 100%)",
-      }}
+      className="py-24 md:py-32 bg-stone-100 dark:bg-[#0a0f1e]"
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-gold text-xs tracking-[0.4em] font-sans mb-4">
             CONNECTIVITY
           </p>
-          <h2 className="font-serif text-3xl md:text-5xl text-cream">
+          <h2 className="font-serif text-3xl md:text-5xl text-stone-900 dark:text-[#f8f5f0]">
             Prime <span className="italic text-gold">Location</span>
           </h2>
-          <p className="text-cream/50 font-sans mt-4 max-w-xl mx-auto">
+          <p className="text-stone-600 dark:text-[#f8f5f0]/50 font-sans mt-4 max-w-xl mx-auto">
             Strategically located at Racecourse Corridor, Coimbatore, offering
             seamless access to the airport, railway station, and IT hubs.
           </p>
         </div>
         <div className="grid lg:grid-cols-3 gap-8 items-start">
-          {/* Map */}
           <div
             className="lg:col-span-2 rounded-2xl overflow-hidden"
             style={{ height: "450px" }}
@@ -49,19 +45,18 @@ export default function MapSection() {
               referrerPolicy="no-referrer-when-downgrade"
             />
           </div>
-          {/* Landmarks */}
           <div className="space-y-4">
-            <h3 className="font-serif text-xl text-cream mb-6">
+            <h3 className="font-serif text-xl text-stone-900 dark:text-[#f8f5f0] mb-6">
               Nearby Landmarks
             </h3>
             {landmarks.map((l) => (
               <div
                 key={l.name}
-                className="glass-dark rounded-xl px-5 py-4 flex items-center gap-4 hover:border-gold/30 hover:-translate-x-1 transition-all duration-300"
+                className="glass-card rounded-xl px-5 py-4 flex items-center gap-4 hover:border-gold/30 hover:-translate-x-1 transition-all duration-300"
               >
                 <span className="text-2xl">{l.icon}</span>
                 <div>
-                  <p className="text-cream font-sans text-sm font-medium">
+                  <p className="text-stone-900 dark:text-[#f8f5f0] font-sans text-sm font-medium">
                     {l.name}
                   </p>
                   <p className="text-gold font-sans text-xs">{l.dist}</p>

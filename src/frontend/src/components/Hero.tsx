@@ -66,10 +66,10 @@ export default function Hero() {
       />
 
       {/* Hero text */}
-      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6">
+      <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-4 md:px-6">
         <p
           ref={subtitleRef}
-          className="text-gold text-xs md:text-sm tracking-[0.45em] font-sans uppercase mb-6"
+          className="text-gold text-[10px] md:text-xs lg:text-sm tracking-[0.35em] md:tracking-[0.45em] font-sans uppercase mb-4 md:mb-6"
           style={{ opacity: 0 }}
         >
           RERA Approved &nbsp;|&nbsp; Racecourse Corridor, Coimbatore
@@ -77,7 +77,7 @@ export default function Hero() {
 
         <h1
           ref={headlineRef}
-          className="font-serif text-4xl md:text-6xl lg:text-7xl text-cream leading-tight max-w-4xl mb-3"
+          className="font-serif text-3xl md:text-5xl lg:text-7xl text-cream leading-tight max-w-4xl mb-2 md:mb-3"
           style={{ opacity: 0 }}
         >
           Premium Villa Plots
@@ -85,7 +85,7 @@ export default function Hero() {
 
         <span
           ref={line2Ref}
-          className="block font-serif text-4xl md:text-6xl lg:text-7xl italic text-gold leading-tight max-w-4xl mb-7"
+          className="block font-serif text-3xl md:text-5xl lg:text-7xl italic text-gold leading-tight max-w-4xl mb-5 md:mb-7"
           style={{ opacity: 0 }}
         >
           Designed for Modern Living
@@ -93,7 +93,7 @@ export default function Hero() {
 
         <p
           ref={descRef}
-          className="text-cream/70 text-base md:text-lg max-w-2xl mb-10 font-sans leading-relaxed"
+          className="text-cream/70 text-sm md:text-base lg:text-lg max-w-xl md:max-w-2xl mb-8 md:mb-10 font-sans leading-relaxed"
           style={{ opacity: 0 }}
         >
           Secure your dream address on the prestigious Racecourse Corridor.

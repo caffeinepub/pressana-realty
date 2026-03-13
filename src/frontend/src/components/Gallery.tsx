@@ -64,17 +64,14 @@ export default function Gallery() {
     <section
       id="gallery"
       data-ocid="gallery.section"
-      className="py-24 md:py-32"
-      style={{
-        background: "linear-gradient(180deg, #0d1528 0%, #0a0f1e 100%)",
-      }}
+      className="py-24 md:py-32 bg-white dark:bg-[#0d1528]"
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-gold text-xs tracking-[0.4em] font-sans mb-4">
             VISUAL TOUR
           </p>
-          <h2 className="font-serif text-3xl md:text-5xl text-cream">
+          <h2 className="font-serif text-3xl md:text-5xl text-stone-900 dark:text-[#f8f5f0]">
             Project <span className="italic text-gold">Gallery</span>
           </h2>
         </div>
@@ -105,7 +102,7 @@ export default function Gallery() {
                 className="w-full object-cover group-hover:scale-110 transition-transform duration-700"
                 style={{ height: img.large ? "450px" : "210px" }}
               />
-              <div className="absolute inset-0 bg-navy/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div className="absolute inset-0 bg-stone-900/40 dark:bg-[#0a0f1e]/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <ZoomIn className="text-gold" size={32} />
               </div>
             </button>
@@ -114,10 +111,10 @@ export default function Gallery() {
       </div>
 
       {lightbox && (
-        <div className="fixed inset-0 z-50 bg-navy/95 flex items-center justify-center p-6">
+        <div className="fixed inset-0 z-50 bg-stone-900/95 dark:bg-[#0a0f1e]/95 flex items-center justify-center p-6">
           <button
             type="button"
-            className="absolute top-6 right-6 text-cream hover:text-gold transition-colors"
+            className="absolute top-6 right-6 text-stone-200 hover:text-gold transition-colors"
             onClick={() => setLightbox(null)}
           >
             <X size={28} />

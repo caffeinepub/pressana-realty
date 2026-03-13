@@ -38,13 +38,16 @@ export default function FAQ() {
   const [open, setOpen] = useState<string | null>(null);
 
   return (
-    <section data-ocid="faq.section" className="py-24 md:py-32 bg-navy">
+    <section
+      data-ocid="faq.section"
+      className="py-24 md:py-32 bg-stone-50 dark:bg-[#0a0f1e]"
+    >
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-gold text-xs tracking-[0.4em] font-sans mb-4">
             HAVE QUESTIONS?
           </p>
-          <h2 className="font-serif text-3xl md:text-5xl text-cream">
+          <h2 className="font-serif text-3xl md:text-5xl text-stone-900 dark:text-[#f8f5f0]">
             Frequently Asked <span className="italic text-gold">Questions</span>
           </h2>
         </div>
@@ -53,21 +56,23 @@ export default function FAQ() {
             <div
               key={faq.id}
               data-ocid={`faq.item.${i + 1}`}
-              className="glass-dark rounded-2xl overflow-hidden hover:border-gold/20 transition-all duration-300"
+              className="glass-card rounded-2xl overflow-hidden hover:border-gold/20 transition-all duration-300"
             >
               <button
                 type="button"
                 className="w-full flex items-center justify-between px-8 py-6 text-left"
                 onClick={() => setOpen(open === faq.id ? null : faq.id)}
               >
-                <span className="font-serif text-lg text-cream">{faq.q}</span>
+                <span className="font-serif text-lg text-stone-900 dark:text-[#f8f5f0]">
+                  {faq.q}
+                </span>
                 <span className="text-gold ml-4 flex-shrink-0">
                   {open === faq.id ? <Minus size={18} /> : <Plus size={18} />}
                 </span>
               </button>
               {open === faq.id && (
                 <div className="px-8 pb-6">
-                  <p className="text-cream/60 font-sans leading-relaxed">
+                  <p className="text-stone-600 dark:text-[#f8f5f0]/60 font-sans leading-relaxed">
                     {faq.a}
                   </p>
                 </div>

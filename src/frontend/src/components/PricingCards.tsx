@@ -77,18 +77,17 @@ export default function PricingCards() {
     <section
       id="pricing"
       data-ocid="pricing.section"
-      className="py-24 md:py-32 bg-navy"
+      className="py-24 md:py-32 bg-stone-50 dark:bg-[#0a0f1e]"
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-gold text-xs tracking-[0.4em] font-sans mb-4">
             INVESTMENT OPTIONS
           </p>
-          <h2 className="font-serif text-3xl md:text-5xl text-cream">
+          <h2 className="font-serif text-3xl md:text-5xl text-stone-900 dark:text-[#f8f5f0]">
             Choose Your <span className="italic text-gold">Plot</span>
           </h2>
         </div>
-
         <div ref={ref} className="grid md:grid-cols-3 gap-8 items-center">
           {plans.map((plan, i) => (
             <div
@@ -102,7 +101,7 @@ export default function PricingCards() {
               className={`relative rounded-2xl p-8 transition-all duration-300 group cursor-default ${
                 plan.featured
                   ? "border-2 border-gold/60 bg-gradient-to-b from-gold/10 to-transparent scale-105 hover:shadow-2xl hover:shadow-gold/30"
-                  : "glass-dark hover:-translate-y-2 hover:shadow-xl hover:shadow-gold/10 hover:border-gold/20"
+                  : "glass-card hover:-translate-y-2 hover:shadow-xl hover:shadow-gold/10 hover:border-gold/20"
               }`}
             >
               {plan.tag && (
@@ -111,7 +110,7 @@ export default function PricingCards() {
                 </div>
               )}
               <div className="mb-6">
-                <h3 className="font-serif text-xl text-cream mb-1">
+                <h3 className="font-serif text-xl text-stone-900 dark:text-[#f8f5f0] mb-1">
                   {plan.name}
                 </h3>
                 <p className="text-gold/70 text-sm font-sans">{plan.size}</p>
@@ -120,7 +119,7 @@ export default function PricingCards() {
                 <span className="font-serif text-4xl text-gold">
                   {plan.price}
                 </span>
-                <span className="text-cream/40 text-sm font-sans ml-2">
+                <span className="text-stone-400 dark:text-[#f8f5f0]/40 text-sm font-sans ml-2">
                   onwards
                 </span>
               </div>
@@ -128,7 +127,7 @@ export default function PricingCards() {
                 {plan.features.map((f) => (
                   <li
                     key={f}
-                    className="flex items-center gap-3 text-cream/70 font-sans text-sm"
+                    className="flex items-center gap-3 text-stone-600 dark:text-[#f8f5f0]/70 font-sans text-sm"
                   >
                     <Check size={14} className="text-gold flex-shrink-0" />
                     {f}

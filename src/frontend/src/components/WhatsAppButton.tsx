@@ -2,7 +2,7 @@ export default function WhatsAppButton() {
   return (
     <a
       data-ocid="whatsapp.button"
-      href="https://wa.me/919876543210?text=Hi%2C%20I%20am%20interested%20in%20Pressana%20Infra%20villa%20plots.%20Please%20share%20details."
+      href="https://wa.me/916384444700?text=Hi%2C%20I%20am%20interested%20in%20Pressana%20Infra%20villa%20plots.%20Please%20share%20details."
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-300"

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import About from "./components/About";
 import Amenities from "./components/Amenities";
 import FAQ from "./components/FAQ";
@@ -21,18 +21,13 @@ export default function App() {
   const [fadeOut, setFadeOut] = useState(false);
   const { isDark, toggle } = useDarkMode();
 
-  // Ensure dark class is set
-  useEffect(() => {
-    document.documentElement.classList.add("dark");
-  }, []);
-
   const handleLoaderComplete = () => {
     setFadeOut(true);
     setTimeout(() => setLoading(false), 600);
   };
 
   return (
-    <div className="min-h-screen bg-navy">
+    <div className={`min-h-screen ${isDark ? "bg-navy" : "bg-stone-50"}`}>
       {loading && (
         <div
           style={{

@@ -63,21 +63,17 @@ export default function Highlights() {
     <section
       id="highlights"
       data-ocid="highlights.section"
-      className="py-24 md:py-32"
-      style={{
-        background: "linear-gradient(180deg, #0a0f1e 0%, #0d1528 100%)",
-      }}
+      className="py-24 md:py-32 bg-stone-100 dark:bg-[#0d1528]"
     >
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-gold text-xs tracking-[0.4em] font-sans mb-4">
             WHY CHOOSE US
           </p>
-          <h2 className="font-serif text-3xl md:text-5xl text-cream">
+          <h2 className="font-serif text-3xl md:text-5xl text-stone-900 dark:text-[#f8f5f0]">
             Project <span className="italic text-gold">Highlights</span>
           </h2>
         </div>
-
         <div ref={ref} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((f, i) => (
             <div
@@ -87,15 +83,17 @@ export default function Highlights() {
                 transform: inView ? "translateY(0)" : "translateY(40px)",
                 transition: `opacity 0.7s ease ${i * 0.1}s, transform 0.7s ease ${i * 0.1}s`,
               }}
-              className="group glass-dark rounded-2xl p-8 hover:-translate-y-2 hover:shadow-2xl hover:shadow-gold/10 hover:border-gold/30 transition-all duration-400 cursor-default"
+              className="group glass-card rounded-2xl p-8 hover:-translate-y-2 hover:shadow-2xl hover:shadow-gold/10 hover:border-gold/30 transition-all duration-400 cursor-default"
             >
               <div
                 className={`w-14 h-14 rounded-xl bg-gradient-to-br ${f.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
               >
                 <f.icon className="text-gold" size={24} />
               </div>
-              <h3 className="font-serif text-xl text-cream mb-3">{f.title}</h3>
-              <p className="text-cream/50 font-sans text-sm leading-relaxed">
+              <h3 className="font-serif text-xl text-stone-900 dark:text-[#f8f5f0] mb-3">
+                {f.title}
+              </h3>
+              <p className="text-stone-500 dark:text-[#f8f5f0]/50 font-sans text-sm leading-relaxed">
                 {f.desc}
               </p>
             </div>

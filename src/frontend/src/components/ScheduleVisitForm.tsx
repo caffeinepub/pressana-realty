@@ -62,26 +62,23 @@ export default function ScheduleVisitForm() {
   };
 
   const inputCls =
-    "w-full bg-white/5 border border-white/10 focus:border-gold/60 focus:ring-0 rounded-xl px-5 py-4 text-cream placeholder-cream/30 font-sans text-sm outline-none transition-all duration-200";
+    "w-full bg-stone-100 dark:bg-white/5 border border-stone-200 dark:border-white/10 focus:border-gold/60 focus:ring-0 rounded-xl px-5 py-4 text-stone-900 dark:text-[#f8f5f0] placeholder-stone-400 dark:placeholder-[#f8f5f0]/30 font-sans text-sm outline-none transition-all duration-200";
 
   return (
     <section
       id="contact"
       data-ocid="form.section"
-      className="py-24 md:py-32"
-      style={{
-        background: "linear-gradient(180deg, #0d1528 0%, #0a0f1e 100%)",
-      }}
+      className="py-24 md:py-32 bg-white dark:bg-[#0d1528]"
     >
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-gold text-xs tracking-[0.4em] font-sans mb-4">
             GET IN TOUCH
           </p>
-          <h2 className="font-serif text-3xl md:text-5xl text-cream">
+          <h2 className="font-serif text-3xl md:text-5xl text-stone-900 dark:text-[#f8f5f0]">
             Schedule a <span className="italic text-gold">Site Visit</span>
           </h2>
-          <p className="text-cream/50 font-sans mt-4">
+          <p className="text-stone-500 dark:text-[#f8f5f0]/50 font-sans mt-4">
             Our team will contact you to confirm your visit.
           </p>
         </div>
@@ -89,13 +86,13 @@ export default function ScheduleVisitForm() {
         {success ? (
           <div
             data-ocid="form.success_state"
-            className="glass-dark rounded-2xl p-16 text-center"
+            className="glass-card rounded-2xl p-16 text-center"
           >
             <CheckCircle className="text-gold mx-auto mb-6" size={56} />
-            <h3 className="font-serif text-2xl text-cream mb-3">
+            <h3 className="font-serif text-2xl text-stone-900 dark:text-[#f8f5f0] mb-3">
               Visit Scheduled!
             </h3>
-            <p className="text-cream/60 font-sans">
+            <p className="text-stone-600 dark:text-[#f8f5f0]/60 font-sans">
               Thank you, {form.name}. Our team will call you within 24 hours to
               confirm your site visit.
             </p>
@@ -120,13 +117,13 @@ export default function ScheduleVisitForm() {
         ) : (
           <form
             onSubmit={handleSubmit}
-            className="glass-dark rounded-2xl p-8 md:p-12 space-y-6"
+            className="glass-card rounded-2xl p-8 md:p-12 space-y-6"
           >
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <label
                   htmlFor="name"
-                  className="text-cream/50 text-xs tracking-wider font-sans mb-2 block"
+                  className="text-stone-500 dark:text-[#f8f5f0]/50 text-xs tracking-wider font-sans mb-2 block"
                 >
                   FULL NAME
                 </label>
@@ -144,7 +141,7 @@ export default function ScheduleVisitForm() {
               <div>
                 <label
                   htmlFor="phone"
-                  className="text-cream/50 text-xs tracking-wider font-sans mb-2 block"
+                  className="text-stone-500 dark:text-[#f8f5f0]/50 text-xs tracking-wider font-sans mb-2 block"
                 >
                   PHONE NUMBER
                 </label>
@@ -163,7 +160,7 @@ export default function ScheduleVisitForm() {
               <div>
                 <label
                   htmlFor="email"
-                  className="text-cream/50 text-xs tracking-wider font-sans mb-2 block"
+                  className="text-stone-500 dark:text-[#f8f5f0]/50 text-xs tracking-wider font-sans mb-2 block"
                 >
                   EMAIL ADDRESS
                 </label>
@@ -182,7 +179,7 @@ export default function ScheduleVisitForm() {
               <div>
                 <label
                   htmlFor="visitDate"
-                  className="text-cream/50 text-xs tracking-wider font-sans mb-2 block"
+                  className="text-stone-500 dark:text-[#f8f5f0]/50 text-xs tracking-wider font-sans mb-2 block"
                 >
                   VISIT DATE
                 </label>
@@ -195,13 +192,13 @@ export default function ScheduleVisitForm() {
                   required
                   type="date"
                   min={new Date().toISOString().split("T")[0]}
-                  className={`${inputCls} [color-scheme:dark]`}
+                  className={`${inputCls} [color-scheme:light] dark:[color-scheme:dark]`}
                 />
               </div>
               <div>
                 <label
                   htmlFor="visitTime"
-                  className="text-cream/50 text-xs tracking-wider font-sans mb-2 block"
+                  className="text-stone-500 dark:text-[#f8f5f0]/50 text-xs tracking-wider font-sans mb-2 block"
                 >
                   PREFERRED TIME
                 </label>
@@ -214,11 +211,19 @@ export default function ScheduleVisitForm() {
                   required
                   className={inputCls}
                 >
-                  <option value="" disabled className="bg-navy">
+                  <option
+                    value=""
+                    disabled
+                    className="bg-white dark:bg-[#0a0f1e]"
+                  >
                     Select time slot
                   </option>
                   {timeSlots.map((t) => (
-                    <option key={t} value={t} className="bg-navy">
+                    <option
+                      key={t}
+                      value={t}
+                      className="bg-white dark:bg-[#0a0f1e]"
+                    >
                       {t}
                     </option>
                   ))}
@@ -228,7 +233,7 @@ export default function ScheduleVisitForm() {
             <div>
               <label
                 htmlFor="message"
-                className="text-cream/50 text-xs tracking-wider font-sans mb-2 block"
+                className="text-stone-500 dark:text-[#f8f5f0]/50 text-xs tracking-wider font-sans mb-2 block"
               >
                 MESSAGE (OPTIONAL)
               </label>
