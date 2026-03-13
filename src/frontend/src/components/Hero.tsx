@@ -51,7 +51,6 @@ export default function Hero() {
         loop
         playsInline
         crossOrigin="anonymous"
-        poster="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1200&q=80"
       >
         <source src="/assets/Pressana_Infra.mp4" type="video/mp4" />
       </video>
