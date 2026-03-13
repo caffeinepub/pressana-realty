@@ -36,10 +36,10 @@ export default function MapSection() {
           >
             <iframe
               title="Pressana Infra Location"
-              src="https://maps.google.com/maps?q=Pressana+Infra,+Race+Course,+Coimbatore&ll=11.018589,76.9161243&z=14&output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m12!1m8!1m3!1d69029.36513611831!2d76.97363779023911!3d11.020688549571044!3m2!1i1024!2i768!4f13.1!2m1!1sPressana%20Infra!5e0!3m2!1sen!2sus!4v1773442433495!5m2!1sen!2sus"
               width="100%"
               height="100%"
-              style={{ border: 0, filter: "invert(90%) hue-rotate(180deg)" }}
+              style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
